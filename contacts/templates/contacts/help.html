@@ -1,0 +1,86 @@
+<!-- contacts/templates/contacts/help.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help</title>
+
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      header {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      h1 {
+        color: #007bff;
+      }
+
+      nav {
+        background-color: #eee;
+        padding: 10px;
+      }
+
+      nav a {
+        margin-right: 15px;
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      footer {
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Help Page</h1>
+    </header>
+
+    <nav>
+      <a href="{% url 'contacts_list' %}">Home</a>
+      <a href="{% url 'contact_details' 1 %}">Contact Details</a>
+      <a href="{% url 'help_page' %}">Help</a>
+    </nav>
+
+    <div class="container">
+      <h2>Welcome to the Help Page</h2>
+      <p>
+        If you need assistance or have any questions, please feel free to
+        contact our support team.
+      </p>
+      <!-- Add more help content as needed -->
+    </div>
+
+    <footer>&copy; 2023 Your Contact App</footer>
+  </body>
+</html>
